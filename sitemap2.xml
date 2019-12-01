@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/">
+<url>
+ <loc>http://git.mrhao.xyz</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://jq.qq.com/?_wv=1027&amp;k=5vfwtdd</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://mrhaohk.xyz:801</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://git.mrhao.xyz/blog</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://git.mrhao.xyz/hackweb</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://mrhaohk.xyz:801/login</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://mrhaohk.xyz:801/wp-login.php?action=register</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+</urlset>
