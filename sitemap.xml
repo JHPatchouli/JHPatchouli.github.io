@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/">
+<url>
+ <loc>http://git.mrhao.xyz/blog/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://github.com/mrhaohk</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://www.caicai.me</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://github.com/ben02/hexo-theme-anatole</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>https://hexo.io/zh-cn/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/about</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/archives</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/links</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/2019/07/24/一个聚合全网搜索引擎/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/categories/web/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/categories/web/html/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/tags/搜索引擎/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/tags/前端开发/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/tags/web/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/tags/html/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/2019/06/05/ohmyzsh美化你的shell/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/categories/linux/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/categories/linux/shell/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/tags/centos/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/tags/debian/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/tags/zsh/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/tags/linux/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/tags/美化/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+<url>
+ <loc>http://git.mrhao.xyz/blog/2019/06/05/前言/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+</urlset>
