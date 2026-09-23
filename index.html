@@ -1,57 +1,113 @@
-<!DOCTYPE HTML> 
-<html> 
-<head> 
-<title>JHPatchouli 导航</title>
-<link rel="stylesheet" href="css/main.css">
-<meta charset="utf-8">
-<meta name="baidu-site-verification" content="b9lOcChmbf"> 
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"> 
-<link rel="shortcut icon" href="images/favicon.ico" /> 
-<noscript> 
-<link rel="stylesheet" href="css/noscript.css"/> 
-</noscript> 
-</head> 
-<body> 
-<div id="wrapper"> 
-	<header id="header"> 
-	<div class="logo"> 
-		<a href="https://jq.qq.com/?_wv=1027&k=5vfwtdd"><img src="http://q.qlogo.cn/headimg_dl?dst_uin=2859676251&spec=640" class="logo"> </a>
-	</div> 
-	<div class="content"> 
-		<div class="inner"> 
-			<h1>JHPatchouliの导航页</h1> 
-			<p>立志成为栈溢出工程师<br>
-               一杯茶，一支烟，一个bug改一天	
-			</p> 
-		</div> 
-	</div> 
-	<nav> 
-		<script type="text/javascript"> 
-			function duihua() 
-			{ 
-			alert("Hao") 
-			} 
-		</script> 
-	<ul> 
-                <li><a href="https://git.mrhao.xyz/blog"> JHPatchouli Blog</a></li><!-- 按钮1--> 
-		<li><a href="https://git.mrhao.xyz/HackWeb">Github Pages托管演示</a></li><!-- 按钮2--> 
-	</ul> 
-	</nav></header> 
-	<footer id="footer">
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> 
-	<p class="copyright">© 2019 <a href="https://github.com/JHPatchouli">JHPatchouli</a></p><!-- 版权--> 
-	</footer> 
-</div> 
-<div id="bg"> 
-</div> 
-<script src="js/jquery.min.js"></script> 
-<script src="js/skel.min.js"></script> 
-<script src="js/util.js"></script> 
-<script src="js/main.js"></script> 
-<script type="text/javascript">document.oncontextmenu=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onpaste=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncopy=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncut=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onselectstart=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}};</script> 
-<audio autoplay> 
-<source src="" type="audio/mpeg"><!-- ！BGM！--> 
-</audio> 
-</body> 
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta name="baidu-site-verification" content="b9lOcChmbf">
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<title>Maintenance page</title>
+	<style>
+		body {
+			background-color: #080913;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin: 0;
+			min-height: 100vh;
+		}
+
+		.hi {
+			display: flex;
+			justify-content: center;
+		}
+
+		.hi h1 {
+			font-size: 5em;
+			color: #FFFFFF;
+			text-shadow: 0px 0px 15px #B88;
+		}
+
+		.hi h2 {
+			font-size: 3em;
+			color: #FFFFFF;
+			text-shadow: 0px 0px 15px #B88;
+			margin-bottom: 0px;
+			margin-top: 4%;
+		}
+
+		.chat {
+			display: flex;
+			justify-content: center;
+			border: solid 5px #0f0f8d;
+			box-shadow: 0px 0px 20px #7eb3e9;
+			width: 70%;
+			height: 70vh;
+			flex-direction: column;
+		}
+
+		.chatin {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			height: 80%;
+		}
+
+		.charone {
+			display: flex;
+			justify-content: flex-start;
+			width: 100%;
+			height: auto;
+		}
+
+		.chartow {
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+			height: auto;
+			align-items: flex-end;
+		}
+
+		.charone div {
+			width: 2%;
+			background: rgb(255, 255, 255);
+			box-shadow: 0px 0px 2px #000000;
+		}
+
+		.chartow div {
+			width: 2%;
+			background: rgb(255, 255, 255);
+			box-shadow: 0px 0px 2px #000000;
+		}
+
+		@media (max-width: 768px) {
+			.hi h1 { font-size: 2.4em; }
+			.hi h2 { font-size: 1.5em; }
+			.chat { width: 92%; }
+		}
+	</style>
+	<script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="hi">
+		<h1>Maintenance page</h1>
+	</div>
+	<div class="chat">
+		<div class="chatin">
+			<div class="charone" id="d1">
+			</div>
+		</div>
+		<div class="hi">
+			<h2>In Reconstruction</h2>
+		</div>
+		<div class="chatin">
+			<div class="chartow" id="d2">
+			</div>
+		</div>
+	</div>
+</body>
+<script src="index.js"></script>
+
 </html>
