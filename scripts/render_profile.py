@@ -158,14 +158,14 @@ aside h1 {{ margin: 0; font-size: 16px; font-weight: 500; color: var(--cyan); }}
 aside .bio {{ margin: 12px 0 0; color: var(--dim); font-size: 13px; }}
 aside nav {{ margin-top: 28px; display: grid; gap: 6px; }}
 aside nav a::before {{ content: "> "; color: var(--dim); }}
-main {{ padding: 28px 36px 48px; max-width: 46rem; }}
+main {{ padding: 28px 36px 48px; max-width: 72rem; }}
 h2 {{
   margin: 28px 0 10px;
   color: var(--amber);
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.16em;
-}}72
+}}
 h2:first-child {{ margin-top: 0; }}
 .row {{
   display: grid;
