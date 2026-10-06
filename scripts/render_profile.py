@@ -158,7 +158,7 @@ aside h1 {{ margin: 0; font-size: 16px; font-weight: 500; color: var(--cyan); }}
 aside .bio {{ margin: 12px 0 0; color: var(--dim); font-size: 13px; }}
 aside nav {{ margin-top: 28px; display: grid; gap: 6px; }}
 aside nav a::before {{ content: "> "; color: var(--dim); }}
-main {{ padding: 28px 36px 48px; max-width: 72rem; }}
+main {{ padding: 28px 48px 48px; }}
 h2 {{
   margin: 28px 0 10px;
   color: var(--amber);
@@ -169,8 +169,8 @@ h2 {{
 h2:first-child {{ margin-top: 0; }}
 .row {{
   display: grid;
-  grid-template-columns: 13rem minmax(0, 1fr);
-  gap: 28px;
+  grid-template-columns: 15rem minmax(28rem, 1fr);
+  gap: 36px;
   padding: 7px 0;
   border-top: 1px solid rgba(26, 51, 56, 0.7);
 }}
