@@ -1,113 +1,149 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-CN">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-	<meta name="baidu-site-verification" content="b9lOcChmbf">
-	<link rel="shortcut icon" href="images/favicon.ico" />
-	<title>Maintenance page</title>
-	<style>
-		* { box-sizing: border-box; }
-
-		body {
-			background-color: #080913;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			margin: 0;
-			padding: 2vh 0;
-			min-height: 100vh;
-			overflow: hidden;
-			font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
-		}
-
-		.hi {
-			display: flex;
-			justify-content: center;
-		}
-
-		.hi h1 {
-			font-size: clamp(1.6rem, 5vw, 3.4rem);
-			color: #FFFFFF;
-			text-shadow: 0px 0px 15px #B88;
-			margin: 0 0 2.5vh 0;
-			text-align: center;
-		}
-
-		.hi h2 {
-			font-size: clamp(1rem, 2.4vw, 1.7rem);
-			color: #FFFFFF;
-			text-shadow: 0px 0px 15px #B88;
-			margin: 1.2vh 0;
-			white-space: nowrap;
-		}
-
-		.chat {
-			display: flex;
-			justify-content: center;
-			border: solid 5px #0f0f8d;
-			box-shadow: 0px 0px 20px #7eb3e9;
-			width: min(70%, 1100px);
-			height: 58vh;
-			flex-direction: column;
-		}
-
-		.chatin {
-			display: flex;
-			justify-content: center;
-			width: 100%;
-			flex: 1 1 0;
-			min-height: 0;
-		}
-
-		.charone {
-			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
-			width: 100%;
-		}
-
-		.chartow {
-			display: flex;
-			justify-content: flex-end;
-			align-items: flex-end;
-			width: 100%;
-		}
-
-		.charone div,
-		.chartow div {
-			width: 2%;
-			background: rgb(255, 255, 255);
-			box-shadow: 0px 0px 2px #000000;
-		}
-
-		@media (max-width: 768px) {
-			.chat { width: 92%; height: 50vh; }
-		}
-	</style>
-	<script src="js/jquery.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="JHPatchouli — 硬件、嵌入式与网络工具。">
+<meta name="baidu-site-verification" content="b9lOcChmbf">
+<title>JHPatchouli</title>
+<style>
+:root {
+  --bg: #f4f1ea;
+  --ink: #1c1915;
+  --muted: #6b645c;
+  --line: #ddd6cb;
+  --accent: #8a3d2f;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 420px at 100% -10%, #efe4d4 0%, transparent 60%),
+    var(--bg);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Songti SC", "Source Han Serif SC", "Noto Serif SC", serif;
+  line-height: 1.55;
+}
+a { color: inherit; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+.wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px 80px; }
+header h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.lede { margin: 10px 0 0; color: var(--muted); font-size: 1.05rem; }
+nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; }
+nav a { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; font-size: 0.92rem; }
+section { margin-top: 42px; }
+h2 {
+  margin: 0 0 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+.item {
+  display: block;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  text-decoration: none;
+}
+.item:last-child { border-bottom: 1px solid var(--line); }
+.item h3 { margin: 0; font-size: 1.2rem; font-weight: 500; }
+.item p { margin: 4px 0 0; color: var(--muted); font-family: "Segoe UI", "Microsoft YaHei", sans-serif; font-size: 0.92rem; }
+.item .go { float: right; color: var(--accent); font-family: "Segoe UI", sans-serif; }
+.archive details { border-top: 1px solid var(--line); }
+.archive summary {
+  cursor: pointer;
+  padding: 14px 0;
+  color: var(--muted);
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  font-size: 0.92rem;
+  list-style: none;
+}
+.archive summary::-webkit-details-marker { display: none; }
+.archive summary::before { content: "+ "; color: var(--accent); }
+.archive details[open] summary::before { content: "– "; }
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr);
+  gap: 12px 24px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  font-size: 0.9rem;
+}
+.row a { text-decoration: none; }
+.row span { color: var(--muted); }
+footer {
+  margin-top: 48px;
+  color: var(--muted);
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  font-size: 0.82rem;
+}
+@media (max-width: 640px) {
+  .wrap { padding-top: 40px; }
+  .row { grid-template-columns: 1fr; gap: 2px; }
+}
+</style>
 </head>
-
 <body>
-	<div class="hi">
-		<h1>Maintenance page</h1>
-	</div>
-	<div class="chat">
-		<div class="chatin">
-			<div class="charone" id="d1">
-			</div>
-		</div>
-		<div class="hi">
-			<h2>In Reconstruction</h2>
-		</div>
-		<div class="chatin">
-			<div class="chartow" id="d2">
-			</div>
-		</div>
-	</div>
-</body>
-<script src="index.js"></script>
+<main class="wrap">
+  <header>
+    <h1>JHPatchouli</h1>
+    <p class="lede">硬件、嵌入式与网络工具。</p>
+    <nav>
+      <a href="https://git.mrhao.xyz/blog/">博客</a>
+      <a href="https://github.com/JHPatchouli/clawbot-roleplay">ClawBot</a>
+      <a href="https://github.com/JHPatchouli">GitHub</a>
+    </nav>
+  </header>
 
+  <section>
+    <h2>正在维护</h2>
+    <a class="item" href="https://github.com/JHPatchouli/clawbot-roleplay">
+      <span class="go">↗</span>
+      <h3>ClawBot 角色扮演后端</h3>
+      <p>基于 ClawBot 微信接口。角色卡、长期记忆、工具调用，以及时间与天气。</p>
+    </a>
+    <a class="item" href="https://git.mrhao.xyz/blog/">
+      <span class="go">↗</span>
+      <h3>博客</h3>
+      <p>git.mrhao.xyz/blog</p>
+    </a>
+  </section>
+
+  <section class="archive">
+    <h2>不再维护</h2>
+    <details>
+      <summary>中兴微</summary>
+      <div class="row"><a href="https://github.com/JHPatchouli/AlicePushBotBurningTool">AlicePushBotBurningTool</a><span>烧录工具。内核见 alice-pusher-bot-zxic，新版界面见 alice-nl80211-webui-zxic。</span></div>
+    </details>
+    <details>
+      <summary>OpenWrt</summary>
+      <div class="row"><a href="https://github.com/JHPatchouli/R4A-OpenWrt">R4A-OpenWrt</a><span>R4A OpenWrt 编译模板</span></div>
+      <div class="row"><a href="https://github.com/JHPatchouli/shared-lede-ua2f">shared-lede-ua2f</a><span>UA2F 定制 OpenWrt 固件</span></div>
+    </details>
+    <details>
+      <summary>嵌入式</summary>
+      <div class="row"><a href="https://github.com/JHPatchouli/arduino-esp8266fsmake-plugin">arduino-esp8266fsmake-plugin</a><span>ESP8266 文件系统镜像上传插件</span></div>
+      <div class="row"><a href="https://github.com/JHPatchouli/ETH_ESP32-Arduino">ETH_ESP32-Arduino</a><span>WT32-ETH01 以太网模块例程</span></div>
+      <div class="row"><a href="https://github.com/JHPatchouli/TPLink_Route_ShowInfo">TPLink_Route_ShowInfo</a><span>TL-WAR1200L 路由器状态查询</span></div>
+    </details>
+    <details>
+      <summary>其他</summary>
+      <div class="row"><a href="https://github.com/JHPatchouli/icv-system">icv-system</a><span>车辆与交通视觉系统</span></div>
+      <div class="row"><a href="https://github.com/JHPatchouli/drScratch">drScratch</a><span>Scratch 项目分析</span></div>
+      <div class="row"><a href="https://github.com/JHPatchouli/ocr.space_code_example">ocr.space_code_example</a><span>OCR API 示例</span></div>
+    </details>
+  </section>
+
+  <footer>git.mrhao.xyz</footer>
+</main>
+</body>
 </html>
