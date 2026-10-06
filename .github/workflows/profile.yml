@@ -1,0 +1,64 @@
+name: refresh profile
+
+on:
+  schedule:
+    - cron: "17 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: list public repositories
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api "users/${{ github.repository_owner }}/repos?per_page=100&type=owner" --paginate > repos.json
+
+      - name: render
+        run: python3 scripts/render_profile.py repos.json
+
+      - name: publish homepage
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Refresh homepage from public repositories"
+          git push
+
+      - name: publish profile readme
+        env:
+          GH_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "PROFILE_TOKEN is not set; GitHub profile README left unchanged"
+            exit 0
+          fi
+          rm -rf profile
+          git clone --depth 1 "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository_owner }}/${{ github.repository_owner }}.git" profile
+          python3 - <<'PY'
+          from pathlib import Path
+          src = Path("PROFILE.md").read_text(encoding="utf-8")
+          dst = Path("profile/README.md")
+          begin, end = "<!-- profile:begin -->", "<!-- profile:end -->"
+          start, stop = src.find(begin), src.find(end)
+          block = src[start:stop + len(end)]
+          current = dst.read_text(encoding="utf-8") if dst.exists() else ""
+          a, b = current.find(begin), current.find(end)
+          if a >= 0 and b > a:
+              updated = current[:a] + block + current[b + len(end):]
+          else:
+              updated = src
+          if not updated.endswith("\n"):
+              updated += "\n"
+          dst.write_text(updated, encoding="utf-8")
+          PY
+          git -C profile config user.name "github-actions[bot]"
+          git -C profile config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C profile add README.md
+          git -C profile diff --cached --quiet || git -C profile commit -m "Refresh profile from public repositories"
+          git -C profile push
