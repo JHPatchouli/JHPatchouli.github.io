@@ -28,7 +28,9 @@ README_END = "<!-- profile:end -->"
 
 
 def load_repos(path: Path) -> list[dict]:
-    raw = path.read_text(encoding="utf-8-sig").strip()
+    blob = path.read_bytes()
+    encoding = "utf-16" if blob.startswith(b"\xff\xfe") else "utf-8-sig"
+    raw = blob.decode(encoding).strip()
     pages = []
     decoder = json.JSONDecoder()
     index = 0
