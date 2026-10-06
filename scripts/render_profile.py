@@ -46,15 +46,8 @@ def load_repos(path: Path) -> list[dict]:
 
 def short_desc(text: str) -> str:
     text = " ".join((text or "").split())
-    if not text:
-        return ""
-    # Keep the first sentence. Bilingual descriptions put Chinese first.
-    if "。" in text:
-        text = text.split("。", 1)[0] + "。"
-    elif ". " in text:
-        text = text.split(". ", 1)[0] + "."
-    if len(text) > 80:
-        text = text[:80].rsplit(" ", 1)[0].rstrip("，,、") + "…"
+    if len(text) > 180:
+        text = text[:180].rsplit(" ", 1)[0].rstrip("，,、") + "…"
     return text
 
 
@@ -172,12 +165,12 @@ h2 {{
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.16em;
-}}
+}}72
 h2:first-child {{ margin-top: 0; }}
 .row {{
   display: grid;
-  grid-template-columns: minmax(0, 16rem) 1fr;
-  gap: 18px;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: 28px;
   padding: 7px 0;
   border-top: 1px solid rgba(26, 51, 56, 0.7);
 }}
